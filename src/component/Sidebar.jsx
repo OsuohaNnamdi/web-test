@@ -11,6 +11,11 @@ export const Sidebar = ({ sidebarOpen, closeSidebar }) => {
     <div className={`sidebar ${sidebarOpen ? "open" : ""}`}>
       <ul className="sidebar-links">
         <li>
+          <NavLink  activeClassName="active" >
+            .
+          </NavLink>
+        </li>
+        <li>
           <NavLink to="/" activeClassName="active" onClick={handleLinkClick}>
             Home
           </NavLink>

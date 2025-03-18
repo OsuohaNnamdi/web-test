@@ -207,7 +207,7 @@ export const Blog = () => {
                 </div>
               </div>
             </div>
-            <nav className="ma-pagination">
+            {/* <nav className="ma-pagination">
               <ul className="pagination justify-content-center">
                 <li className="ma-page-item deactive-page-item">
                   <a className="ma-page-link" href="#" title="Previous Page">
@@ -227,7 +227,7 @@ export const Blog = () => {
                   </a>
                 </li>
               </ul>
-            </nav>
+            </nav> */}
           </div>
         </div>
       </section>

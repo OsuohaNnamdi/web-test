@@ -14,7 +14,7 @@ export const ProjectList = () => {
   };
 
   const handleProjectClick = (id) => {
-    console.log("Navigating to project ID:", id); // Debugging
+   
     navigate(`/project/${id}`);
   };
 
@@ -97,6 +97,12 @@ export const ProjectList = () => {
                             loading="lazy"
                             src={item.image}
                             alt={item.alt}
+                            style={{
+                              width: "100%",       // Ensure the image takes up the full width of its container
+                              height: "200px",     // Maintain the aspect ratio
+                              objectFit: "contain", // Ensure the entire image is visible without cropping
+                              display: "block",   // Remove any extra space below the image
+                            }}
                           />
                         </a>
                         <div className="item-info">

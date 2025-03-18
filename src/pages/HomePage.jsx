@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { portfolioData, socialMediaLinks } from '../data'
 import { Testimonial } from '../component/customer-test';
 import { servicesData } from '../data';
+import { useNavigate } from 'react-router-dom';
 
 export const HomePage = () => {
 
@@ -16,7 +17,16 @@ export const HomePage = () => {
       activeFilter === "*" || item.category === activeFilter
     );
 
-    const Tech = "{TECH}"
+
+      const navigate = useNavigate();
+    
+    
+      const handleProjectClick = (id) => {
+        console.log("Navigating to project ID:", id); // Debugging
+        navigate(`/project/${id}`);
+      };
+    
+  
 
   return (
     <div className=" dark-theme ">
@@ -38,7 +48,7 @@ export const HomePage = () => {
                       <div className="col-12   ">
                         <div className="hero-social-icons mb-3 ">
                         <div className="sc-wrapper dir-row sc-flat">
-                        <h1 className="display-4" style={{marginBottom: "50px"}}>Welcome to <span className="text-primary">Syn{Tech}tic Solutions</span></h1>
+                        <h1 className="display-4" style={{marginBottom: "50px"}}>Welcome to <span className="text-primary">SynoLoop Solutions</span></h1>
                           <ul className="sc-list">
                             {socialMediaLinks.map((link, index) => (
                               <li key={index} className="sc-item" title={link.title}>
@@ -78,7 +88,7 @@ export const HomePage = () => {
                       <div className="col-12   ">
                         <div className="hero-social-icons mb-3 ">
                         <div className="sc-wrapper dir-row sc-flat">
-                        <h1 className="display-4" style={{marginBottom: "50px"}}>Welcome to <span className="text-primary">Syn{Tech}tic Solutions</span></h1>
+                        <h1 className="display-4" style={{marginBottom: "50px"}}>Welcome to <span className="text-primary">SynoLoop Solutions</span></h1>
                             <ul className="sc-list">
                               {socialMediaLinks.map((link, index) => (
                                 <li key={index} className="sc-item" title={link.title}>
@@ -117,7 +127,7 @@ export const HomePage = () => {
                       <div className="col-12   ">
                         <div className="hero-social-icons mb-3 ">
                         <div className="sc-wrapper dir-row sc-flat">
-                        <h1 className="display-4" style={{marginBottom: "50px"}}>Welcome to <span className="text-primary">Syn{Tech}tic Solutions</span></h1>
+                        <h1 className="display-4" style={{marginBottom: "50px"}}>Welcome to <span className="text-primary">SynoLoop Solutions</span></h1>
                             <ul className="sc-list">
                               {socialMediaLinks.map((link, index) => (
                                 <li key={index} className="sc-item" title={link.title}>
@@ -191,136 +201,135 @@ export const HomePage = () => {
     </section>
 
   <section className="about mega-section" id="about">
-            <div className="container">
-            {/* Start first about div*/}
-            <div className="content-block  ">
-                <div className="row">
-                <div className="col-12 col-lg-6 d-flex align-items-center order-1 order-lg-0 about-col pad-end  wow fadeInUp " data-wow-delay="0.6s">
-                    <div className="text-area ">
-                    <div className="sec-heading  light-title ">
-                        <div className="content-area"><span className=" pre-title       wow fadeInUp " data-wow-delay=".2s">about Us</span>
-                        <h2 className=" title    wow fadeInUp" data-wow-delay=".4s"><span className="hollow-text">trusted</span> by worldwide clients  since<span className="featured-text">  2024. <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" preserveAspectRatio="none"><path d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7" /></svg></span></h2>
-                        </div>
+  <div className="container">
+          <div className="content-block">
+            <div className="row">
+              <div className="col-12 col-lg-6 d-flex align-items-center order-1 order-lg-0 about-col pad-end wow fadeInUp" data-wow-delay="0.6s">
+                <div className="text-area">
+                  <div className="sec-heading light-title">
+                    <div className="content-area">
+                      <span className="pre-title wow fadeInUp" data-wow-delay=".2s">About Us</span>
+                      <h2 className="title wow fadeInUp" data-wow-delay=".4s">
+                        <span className="hollow-text">Trusted</span> by Worldwide Clients Since <span className="featured-text">2024.</span>
+                      </h2>
                     </div>
-                    <p className=" about-text">We are a dynamic software development company founded by skilled engineers and developers. We specialize in delivering innovative solutions, IT training, and dependable support while ensuring timely results. Our mission is to empower individuals and businesses to excel in the ever-evolving tech landscape.</p>
-                    <div className="info-items-list ">
-                        <div className="row ">
-                        <div className="col-9 col-xl-6">
-                            <div className="info-item"><i className="flaticon-medal  info-icon" />
+                  </div>
+                  <p className="about-text">
+                    At SynoLoop Solutions, we are a team of passionate engineers and developers dedicated to delivering innovative software solutions, IT training, and reliable technical support. Founded in 2024, our mission is to empower individuals and businesses to thrive in the ever-evolving tech landscape. From custom software development to tech education, we are committed to excellence and timely results.
+                  </p>
+                  <div className="info-items-list">
+                    <div className="row">
+                      {[
+                        { icon: "flaticon-medal", title: "First on Field", text: "Leading the way in creative solutions with unparalleled expertise." },
+                        { icon: "flaticon-game-console", title: "Easy to Reach", text: "Always accessible and ready to respond promptly to your queries." },
+                        { icon: "flaticon-map", title: "Worldwide Services", text: "Offering exceptional services to clients across the globe." },
+                        { icon: "flaticon-technical-support-1", title: "24/7 Support", text: "Providing reliable, around-the-clock assistance for all your needs." },
+                      ].map((item, index) => (
+                        <div className="col-9 col-xl-6" key={index}>
+                          <div className="info-item">
+                            <i className={`${item.icon} info-icon`} />
                             <div className="info-content">
-                                <h5 className="info-title">first on field </h5>
-                                <p className="info-text">Leading the way in creative solutions with unparalleled knowledge.</p>
+                              <h5 className="info-title">{item.title}</h5>
+                              <p className="info-text">{item.text}</p>
                             </div>
-                            </div>
+                          </div>
                         </div>
-                        <div className="col-9 col-xl-6">
-                            <div className="info-item"><i className="flaticon-game-console info-icon" />
-                            <div className="info-content">
-                                <h5 className="info-title">easy to reach </h5>
-                                <p className="info-text">Always accessible and ready to respond promptly to your queries.</p>
-                            </div>
-                            </div>
-                        </div>
-                        <div className="col-9 col-xl-6">
-                            <div className="info-item"><i className="flaticon-map info-icon" />
-                            <div className="info-content">
-                                <h5 className="info-title">worldwide services</h5>
-                                <p className="info-text">Offering exceptional services to clients across the globe.</p>
-                            </div>
-                            </div>
-                        </div>
-                        <div className="col-9 col-xl-6">
-                            <div className="info-item"><i className="flaticon-technical-support-1  info-icon" />
-                            <div className="info-content">
-                                <h5 className="info-title">24/7 support</h5>
-                                <p className="info-text">Providing reliable, around-the-clock assistance for all your needs.</p>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
+                      ))}
                     </div>
-                    <div className="cta-area"><a className=" btn-solid reveal-start" href="/contact-us">Get in touch</a>
-                        <div className="signature ">
-                        <div className="signature-img"></div>
-                        <div className="signature-name">CEO &amp; Co Founder </div>
-                        </div>
+                  </div>
+                  <div className="cta-area">
+                    <a className="btn-solid reveal-start" href="/contact-us">Get in Touch</a>
+                    <div className="signature">
+                      <div className="signature-img"></div>
+                      <div className="signature-name">CEO & Co-Founder</div>
                     </div>
-                    </div>
+                  </div>
                 </div>
-                <div className="col-12 col-lg-6 d-flex align-items-center order-0 order-lg-1 about-col  wow fadeInUp" data-wow-delay="0.2s">
-                    <div className="img-area  " data-tilt>
-                    <div className="image   "><img className="about-img img-fluid " loading="lazy" src="assets/images/about/1.png" alt="Our vision" /></div>
-                    </div>
+              </div>
+              <div className="col-12 col-lg-6 d-flex align-items-center order-0 order-lg-1 about-col wow fadeInUp" data-wow-delay="0.2s">
+                <div className="img-area" data-tilt>
+                  <div className="image">
+                    <img className="about-img img-fluid" loading="lazy" src="assets/images/about/1.png" alt="SynoLoop Solutions Team" />
+                  </div>
                 </div>
-                </div>
+              </div>
             </div>
-            {/*End first about div*/}
-            </div>
+          </div>
+        </div>
         </section>
 
   <section className="portfolio mega-section" id="portfolio">
-      <div className="container">
-        <div className="sec-heading">
-          <div className="content-area">
-            <span className="pre-title wow fadeInUp" data-wow-delay=".2s">
-              {portfolioData.heading.preTitle}
-            </span>
-            <h2 className="title wow fadeInUp" data-wow-delay=".4s">
-              {portfolioData.heading.title.split(" ")[0]}{" "}
-              <span className="hollow-text">{portfolioData.heading.title.split(" ")[1]}</span>
-            </h2>
-          </div>
-          <div className="cta-area wow fadeInUp" data-wow-delay=".8s">
-            <a className="cta-btn btn-solid" href={portfolioData.heading.linkHref}>
-              {portfolioData.heading.linkText}{" "}
-              <i className="bi bi-arrow-right icon" />
-            </a>
-          </div>
-        </div>
+  <div className="container">
+    <div className="sec-heading">
+      <div className="content-area">
+        <span className="pre-title wow fadeInUp" data-wow-delay=".2s">
+          {portfolioData.heading.preTitle}
+        </span>
+        <h2 className="title wow fadeInUp" data-wow-delay=".4s">
+          {portfolioData.heading.title.split(" ")[0]}{" "}
+          <span className="hollow-text">{portfolioData.heading.title.split(" ")[1]}</span>
+        </h2>
+      </div>
+      <div className="cta-area wow fadeInUp" data-wow-delay=".8s">
+        <a className="cta-btn btn-solid" href={portfolioData.heading.linkHref}>
+          {portfolioData.heading.linkText} <i className="bi bi-arrow-right icon" />
+        </a>
+      </div>
+    </div>
 
-        <div className="portfolio-wrapper">
-          <ul className="portfolio-btn-list wow fadeInUp" data-wow-delay=".2s">
-            {portfolioData.categories.map((category, index) => (
-              <li
+    <div className="portfolio-wrapper">
+      <ul className="portfolio-btn-list wow fadeInUp" data-wow-delay=".2s">
+        {portfolioData.categories.map((category, index) => (
+          <li
+            key={index}
+            className={`portfolio-btn ${activeFilter === category.filter ? "active" : ""}`}
+            data-filter={category.filter}
+            onClick={() => handleFilterClick(category.filter)}
+          >
+            {category.name}
+          </li>
+        ))}
+      </ul>
+
+      <div className="portfolio-group wow fadeIn" data-wow-delay=".4s">
+        <div className="row">
+          {filteredItems.length > 0 ? (
+            filteredItems.map((item, index) => (
+              <div
                 key={index}
-                className={`portfolio-btn ${activeFilter === category.filter ? "active" : ""}`}
-                data-filter={category.filter}
-                onClick={() => handleFilterClick(category.filter)}
+                className={`col-12 col-md-6 col-lg-4 portfolio-item ${item.category}`}
+                onClick={() => handleProjectClick(item.id)}
               >
-                {category.name}
-              </li>
-            ))}
-          </ul>
-
-          <div className="portfolio-group wow fadeIn" data-wow-delay=".4s">
-            <div className="row">
-              {filteredItems.length > 0 ? (
-                filteredItems.map((item, index) => (
-                  <div key={index} className={`col-12 col-md-6 col-lg-4 portfolio-item ${item.category}`}>
-                    <div className="item">
-                      <a className="portfolio-img-link" href={item.link}>
-                        <img
-                          className="portfolio-img img-fluid"
-                          loading="lazy"
-                          src={item.image}
-                          alt={item.alt}
-                        />
-                      </a>
-                      <div className="item-info">
-                        <h3 className="item-title">{item.title}</h3>
-                        <i className="bi bi-arrow-right icon" />
-                      </div>
-                    </div>
+                <div className="item">
+                  <a className="portfolio-img-link">
+                    <img
+                      className="portfolio-img img-fluid"
+                      loading="lazy"
+                      src={item.image}
+                      alt={item.alt}
+                      style={{
+                        width: "100%",       // Ensure the image takes up the full width of its container
+                        height: "200px",     // Maintain the aspect ratio
+                        objectFit: "contain", // Ensure the entire image is visible without cropping
+                        display: "block",   // Remove any extra space below the image
+                      }}
+                    />
+                  </a>
+                  <div className="item-info">
+                    <h3 className="item-title">{item.title}</h3>
+                    <i className="bi bi-arrow-right icon" />
                   </div>
-                ))
-              ) : (
-                <p>No projects found for this category</p>
-              )}
-            </div>
-          </div>
+                </div>
+              </div>
+            ))
+          ) : (
+            <p>No projects found for this category</p>
+          )}
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
   <Testimonial />
  

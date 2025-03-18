@@ -38,12 +38,12 @@ export const socialMediaLinks = [
     },
     {
       title: "LinkedIn",
-      url: "https://www.linkedin.com/company/syntechtic-solutions/",
+      url: "https://www.linkedin.com/company/synoloop-solutions/",
       iconClass: "fab fa-linkedin",
     },
     {
       title: "Instagram",
-      url: "https://www.instagram.com/synt.echticsolutions/",
+      url: "https://www.instagram.com/synoloop_solutions/",
       iconClass: "fab fa-instagram",
     },
     {
@@ -121,44 +121,44 @@ export   const portfolioData = {
     {
       id: 1,
       category: "web",
-      image: "/assets/images/project/DrKilinkSnaps/1.jpg",
-      alt: "portfolio item photo",
+      image: "/assets/images/project/DrKilinkSnaps/1.png",
+      alt: "project photo",
       title: "Web Appliation",
       link: "https://github.com/Syntechtic-Solutions/-Dr-Klinik-AI-Detector",
       images: [
-        '/assets/images/project/DrKilinkSnaps/1.jpg',
-        '/assets/images/project/DrKilinkSnaps/2.jpg',
-        '/assets/images/project/DrKilinkSnaps/3.jpg',
-        '/assets/images/project/DrKilinkSnaps/4.jpg',
-        '/assets/images/project/DrKilinkSnaps/5.jpg',
-        '/assets/images/project/DrKilinkSnaps/6.jpg',
-        '/assets/images/project/DrKilinkSnaps/7.jpg',
-        '/assets/images/project/DrKilinkSnaps/8.jpg'
+        '/assets/images/project/DrKilinkSnaps/1.png',
+        '/assets/images/project/DrKilinkSnaps/2.png',
+        '/assets/images/project/DrKilinkSnaps/3.png',
+        '/assets/images/project/DrKilinkSnaps/4.png',
+        '/assets/images/project/DrKilinkSnaps/5.png',
+        '/assets/images/project/DrKilinkSnaps/6.png',
+        '/assets/images/project/DrKilinkSnaps/7.png',
+        '/assets/images/project/DrKilinkSnaps/8.png'
       ]
     },
     {
       id: 2,
       category: "web",
-      image: "/assets/images/project/csc/1.jpg",
-      alt: "portfolio item photo",
+      image: "/assets/images/project/csc/1.png",
+      alt: "project photo",
       title: "Web Application",
       link: "https://github.com/Syntechtic-Solutions/Land-Surf",
       images: [
-        '/assets/images/project/csc/1.jpg',
-        '/assets/images/project/csc/2.jpg',
-        '/assets/images/project/csc/3.jpg',
-        '/assets/images/project/csc/4.jpg',
-        '/assets/images/project/csc/5.jpg',
-        '/assets/images/project/csc/6.jpg',
-        '/assets/images/project/csc/7.jpg',
-        '/assets/images/project/csc/8.jpg'
+        '/assets/images/project/csc/1.png',
+        '/assets/images/project/csc/2.png',
+        '/assets/images/project/csc/3.png',
+        '/assets/images/project/csc/4.png',
+        '/assets/images/project/csc/5.png',
+        '/assets/images/project/csc/6.png',
+        '/assets/images/project/csc/7.png',
+        '/assets/images/project/csc/8.png'
       ]
     },
     {
       id: 3,
       category: "data",
       image: '/assets/images/project/bot/1.png',
-      alt: "portfolio item photo",
+      alt: "project photo",
       title: "data analysis",
       link: "https://github.com/Syntechtic-Solutions/Chatbot-llm",
       images: [
@@ -170,7 +170,7 @@ export   const portfolioData = {
       id: 4,
       category: "api",
       image: '/assets/images/project/mra/1.png',
-      alt: "portfolio item photo",
+      alt: "project photo",
       title: "API",
       link: "https://github.com/Syntechtic-Solutions/MRAssistant",
       images: [
@@ -182,7 +182,7 @@ export   const portfolioData = {
       id: 5,
       category: "data",
       image: '/assets/images/project/pred/2.png',
-      alt: "portfolio item photo",
+      alt: "project photo",
       title: "Artifical Intelligence",
       link: "https://github.com/Syntechtic-Solutions/Task-management-app",
       images: [
@@ -198,7 +198,7 @@ export   const portfolioData = {
       id: 6,
       category: "data",
       image: "/assets/images/project/whatapp bot/4.jpeg",
-      alt: "portfolio item photo",
+      alt: "project photo",
       title: "Artifical Intelligence",
       link: "https://github.com/Syntechtic-Solutions/whatsapp-bot-gemini-student-handbook",
       images: [
@@ -211,7 +211,79 @@ export   const portfolioData = {
         '/assets/images/project/whatapp bot/7.jpeg',
 
       ]
-    }
+    },{
+      id: 7,
+      category: "web",
+      image: "/assets/images/project/final/1.png",
+      alt: "project photo",
+      title: "Web Appliation",
+      link: "https://github.com/OsuohaNnamdi/notice/tree/main/virtual",
+      images: [
+        '/assets/images/project/final/1.png',
+        '/assets/images/project/final/2.png',
+        '/assets/images/project/final/3.png',
+        '/assets/images/project/final/4.png',
+        '/assets/images/project/final/5.png',
+        '/assets/images/project/final/6.png',
+        
+      ]
+    },
+    {
+      id: 8,
+      category: "web",
+      image: "/assets/images/project/flight/1.png",
+      alt: "project photo",
+      title: "Web Appliation",
+      link: "https://github.com/Syntechtic-Solutions/flight/tree/main/frontends",
+      images: [
+        '/assets/images/project/flight/1.png',
+        '/assets/images/project/flight/2.png',
+        '/assets/images/project/flight/3.png',
+        '/assets/images/project/flight/4.png',
+      ]
+    },
+    {
+      id: 9,
+      category: "api",
+      image: '/assets/images/project/flightApi/1.png',
+      alt: "project photo",
+      title: "API",
+      link: "https://github.com/Syntechtic-Solutions/flight/tree/main/Backend",
+      images: [
+        '/assets/images/project/flightApi/1.png',
+        '/assets/images/project/flightApi/2.png',
+        '/assets/images/project/flightApi/3.png',
+        '/assets/images/project/flightApi/4.png',
+      ]
+    },
+    {
+      id: 10,
+      category: "api",
+      image: '/assets/images/project/noticeApi/1.png',
+      alt: "project photo",
+      title: "API",
+      link: "https://github.com/OsuohaNnamdi/notice/tree/main/Virtual-Notice-Board",
+      images: [
+        '/assets/images/project/noticeApi/1.png',
+        '/assets/images/project/noticeApi/2.png',
+        '/assets/images/project/noticeApi/3.png',
+        '/assets/images/project/noticeApi/4.png',
+       
+      ]
+    },
+    {
+      id: 11,
+      category: "api",
+      image: '/assets/images/project/webhook/1.png',
+      alt: "project photo",
+      title: "API",
+      link: "https://github.com/Syntechtic-Solutions/WhatsApp-Integration",
+      images: [
+        '/assets/images/project/webhook/1.png',
+        '/assets/images/project/webhook/2.png',
+        '/assets/images/project/webhook/3.png'
+      ]
+    },
   ]
 };
 export const teamMembers = [

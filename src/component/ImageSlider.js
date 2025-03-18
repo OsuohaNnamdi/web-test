@@ -16,7 +16,7 @@ const ImageSlider = ({ images, onClose, siteUrl }) => {
     setCurrentIndex(newIndex);
   };
 
-  console.log("Current Image:", images[currentIndex]);
+ 
 
   return (
     <div className="sliders">

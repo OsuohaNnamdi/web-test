@@ -1,85 +1,115 @@
 .sliders {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 5%;
-    padding-right: 5%;
-    width: 100%;
-    height: 750PX;
-    overflow: hidden;
-    background-color: black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh; /* Full viewport height for mobile */
+  overflow: hidden;
+  background-color: black;
+}
+
+.slide-image {
+  width: 100%;
+  height: auto; /* Adjust height automatically */
+  max-height: 90vh; /* Limit height to 90% of viewport height */
+  object-fit: contain; /* Ensure the full image is visible */
+  border-radius: 10px;
+}
+
+.left-arrows, .right-arrows {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 24px;
+  z-index: 10;
+}
+
+.left-arrows {
+  left: 10px;
+}
+
+.right-arrows {
+  right: 10px;
+}
+
+.left-arrows:hover, .right-arrows:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 24px;
+  z-index: 10;
+}
+
+.close-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.go-to-site-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 25px;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(255, 75, 43, 0.4);
+}
+
+.go-to-site-button:hover {
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(255, 75, 43, 0.6);
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .sliders {
+    height: 100vh; /* Full viewport height for mobile */
+    padding: 0; /* Remove padding for full-width display */
   }
-  
+
   .slide-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+    max-height: 80vh; /* Slightly smaller to account for buttons */
   }
-  
+
   .left-arrows, .right-arrows {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 24px;
-    z-index: 10;
+    font-size: 20px; /* Smaller arrows for mobile */
+    padding: 8px;
   }
-  
-  .left-arrows {
-    left: 10px;
-  }
-  
-  .right-arrows {
-    right: 10px;
-  }
-  
-  .left-arrows:hover, .right-arrows:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
+
   .close-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 24px;
-    z-index: 10;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    padding: 8px;
   }
-  
-  .close-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
+
   .go-to-site-button {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    padding: 12px 25px;
-    background: linear-gradient(45deg, #ff416c, #ff4b2b);
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 30px;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0px 4px 10px rgba(255, 75, 43, 0.4);
+    bottom: 10px;
+    right: 10px;
+    font-size: 16px;
+    padding: 10px 20px;
   }
-  
-  .go-to-site-button:hover {
-    background: linear-gradient(45deg, #ff4b2b, #ff416c);
-    transform: scale(1.05);
-    box-shadow: 0px 6px 15px rgba(255, 75, 43, 0.6);
-  }
-  
+}
